@@ -50,9 +50,11 @@ module Kimurai
     option "repo-key-path", type: :string, banner: "SSH key for a git repo"
     def deploy(user_host)
       if !`git status --short`.empty?
-        raise "Please commit first your changes"
+        raise "Deploy: Please commit your changes first"
+      elsif `git remote`.empty?
+        raise "Deploy: Please add remote origin repository to your repo first"
       elsif !`git rev-list master...origin/master`.empty?
-        raise "Please push your commits to the remote origin repo"
+        raise "Deploy: Please push your commits to the remote origin repo first"
       end
 
       repo_url = options["repo-url"] ? options["repo-url"] : `git remote get-url origin`.strip
