@@ -3,6 +3,8 @@ require_relative 'generator'
 
 module Kimurai
   class CLI < Thor
+    map %w[--version -v] => :__print_version
+
     desc "new", "Create new crawler project"
     def new(project_name)
       Generator.new.generate_project(project_name)
@@ -153,6 +155,11 @@ module Kimurai
 
       require 'kimurai/dashboard/app'
       Kimurai::Dashboard::App.run!
+    end
+
+    desc "--version, -v", "Print the version"
+    def __print_version
+      puts VERSION
     end
 
     private
