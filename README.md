@@ -6,7 +6,7 @@
   <h1>Kimurai</h1>
 </div>
 
-Kimurai is a modern web scraping framework written in Ruby which **works out of box with headless chromium/firefox, phantomjs**, or simple HTTP requests and **allows to scrape and interact with javascript rendered websites.**
+Kimurai is a modern web scraping framework written in Ruby which **works out of box with Headless Chromium/Firefox, PhantomJS**, or simple HTTP requests and **allows to scrape and interact with JavaScript rendered websites.**
 
 Kimurai based on well-known [Capybara](https://github.com/teamcapybara/capybara) and [Nokogiri](https://github.com/sparklemotion/nokogiri) gems, so you don't have to learn anything new. Lets see:
 
