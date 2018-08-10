@@ -579,7 +579,7 @@ end
 **You can query `response` using [XPath or CSS selectors](https://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/XML/Searchable)**. Check Nokogiri tutorials to understand how to work with `response`:
 * [Parsing HTML with Nokogiri](http://ruby.bastardsbook.com/chapters/html-parsing/) - ruby.bastardsbook.com
 * [HOWTO parse HTML with Ruby & Nokogiri](https://readysteadycode.com/howto-parse-html-with-ruby-and-nokogiri) - readysteadycode.com
-* [Instance Method Summary](https://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/HTML/Document) (documentation) - rubydoc.info
+* [Class: Nokogiri::HTML::Document](https://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/HTML/Document) (documentation) - rubydoc.info
 
 
 ### `browser` object
@@ -614,6 +614,7 @@ end
 Check out **Capybara cheat sheets** where you can see all available methods **to interact with browser**:
 * [UI Testing with RSpec and Capybara [cheat sheet]](http://cheatrags.com/capybara) - cheatrags.com
 * [Capybara Cheatsheet PDF](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf) - thoughtbot.com
+* [Class: Capybara::Session](https://www.rubydoc.info/github/jnicklas/capybara/Capybara/Session) (documentation) - rubydoc.info
 
 ### `request_to` method
 
