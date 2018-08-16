@@ -122,14 +122,20 @@ module Kimurai
     def console(crawler_name = nil)
       require 'pry'
 
-      if crawler_name
-        raise "Can't find Kimurai project" unless inside_project?
-        require './config/boot'
-        klass = crawler_name ? find_crawler(crawler_name) : ApplicationCrawler
-      else
-        require_relative 'all'
-        klass = ::Kimurai::Base
-      end
+      klass =
+        if crawler_name
+          raise "Can't find Kimurai project" unless inside_project?
+          require './config/boot'
+          find_crawler(crawler_name)
+        else
+          if inside_project?
+            require './config/boot'
+            ApplicationCrawler
+          else
+            require_relative 'all'
+            ::Kimurai::Base
+          end
+        end
 
       klass.preload!
       instance =
